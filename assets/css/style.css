@@ -15,7 +15,7 @@ body {
 /* Headers and Logo */
 
 h1, h2 {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #252525;
@@ -64,6 +64,12 @@ h1, h2 {
     height: 600px;
     width: 100%;
     overflow: hidden;
+    position: relative;
+}
+
+#cover-text, #cover-text h2 {
+
+    color: #fff;
 }
 #hero-image {
     height: 600px;
@@ -85,3 +91,22 @@ h1, h2 {
         transform: scale(1.1);
     }
 }
+
+#cover-text {
+    font-size: 130%;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    width: 300px;
+    height: 200px;
+    padding-top: 100px;
+    padding-left: 10px;
+    background-color: rgba(241, 109, 107, .7);
+
+    bottom: 30px;
+    right: 150px;
+    position: absolute;
+}
+
+
+
