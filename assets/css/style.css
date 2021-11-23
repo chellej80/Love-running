@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap');
 
 * {
     margin: 0;
@@ -7,12 +7,12 @@
 }
 
 body {
-    font-family: lato, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
 }
 
-/* Headers and Logo */
+/* headings and logo */
 
 h1, h2 {
     font-family: Oswald, sans-serif;
@@ -27,28 +27,26 @@ h1, h2 {
     margin-left: 30px;
 }
 
-#menu, #logo {
-    line-height: 75px;
-}
-
-/* Nav links */
+/* navigation links */
 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
+}
 
+#menu, #logo {
+    line-height: 75px;
 }
 
 #menu li {
     float: right;
     list-style-type: none;
-    margin-right: 10px;
+    margin-right: 30px;
 }
 
 #menu a {
     text-decoration: none;
     color: inherit;
-
 }
 
 #menu a:hover {
@@ -59,35 +57,36 @@ h1, h2 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Hero Image */
+/* hero image and cover text */
 
 #hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
+
     position: relative;
 }
 
 #cover-text, #cover-text h2 {
-
     color: #fff;
 }
+
 #hero-image {
     height: 600px;
     width: 100%;
     background: url('../images/hero-image.webp') no-repeat center center;
 
-/* animates  zoom affect on loading page */
+    /* animates zoom effect on loading page */
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
-/*create level of zoom for hero image */
+
+/* creates the level of zoom for hero image */
 @keyframes hero-zoom {
     from{
         transform: scale(1);
     }
-
     to{
         transform: scale(1.1);
     }
@@ -98,14 +97,18 @@ h1, h2 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
+
     width: 300px;
     height: 200px;
-    padding-top: 100px;
+
+    padding-top: 40px;
     padding-left: 10px;
+
     background-color: rgba(241, 109, 107, .7);
 
     bottom: 30px;
     right: 150px;
+
     position: absolute;
 }
 
@@ -116,33 +119,28 @@ h1, h2 {
 }
 
 #left-about {
-
     padding-top: 30px;
     width: 33%;
     float: left;
-    
 }
 
 #right-about {
-
     padding-top: 30px;
     width: 33%;
     float: right;
-
 }
 
 #center-about {
     width: 33%;
     margin: 0 auto;
-    
 }
 
 hr {
-
-   border-top: 1px solid #3a3a3a;
-   width:100%;
-   margin: 5px 0; 
+    border-top: 1px solid #3a3a3a;
+    width: 100%;
+    margin: 5px 0;
 }
+
 .left-about-heading {
     width: 60%;
     float: right;
@@ -174,8 +172,8 @@ hr {
 }
 
 #circle-container {
-    height: 300px;
     width: 300px;
+    height: 300px;
     padding: 30px;
     border-style: solid;
     border-color: #ccc;
@@ -190,7 +188,7 @@ hr {
     border-radius: 50%;
 }
 
-/*event times */
+/* event times */
 
 #times {
     background-image: url('../images/dublin-city.webp');
@@ -211,14 +209,13 @@ hr {
     text-align: center;
     border: 2px solid white;
     box-sizing: border-box;
-
 }
 
 #times h2 {
     color: #fafafa;
 }
 
-/* footer style */
+/* footer */
 
 footer {
     height: 150px;
@@ -237,5 +234,49 @@ footer {
     margin: 1%;
     padding: 5%;
     color: #3a3a3a;
+}/* gallery */
 
+#photos {
+    clear: both;
+    line-height: 0;
+    column-count: 4;
+    column-gap: 0;
 }
+
+#photos > img {
+    width: 100%;
+}
+
+/* Media queries */
+
+/* For larger to medium screens size from 1200px wide and down */
+@media screen and (max-width: 1200px) {
+    #club-ethos {
+        width: 65%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    #left-about, #right-about {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #center-about {
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    hr {
+        display: none;
+    }
+}
+
